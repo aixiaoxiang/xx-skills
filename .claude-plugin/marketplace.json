@@ -1,0 +1,182 @@
+{
+  "name": "xx-skills",
+  "owner": {
+    "name": "xxskill"
+  },
+  "metadata": {
+    "description": "小象AI产品Builder技能包 — 从想法到上线的全流程方法论，16 个 skill 覆盖想清楚、做出来、跑起来三个阶段",
+    "version": "2.1.0"
+  },
+  "plugins": [
+    {
+      "name": "xx",
+      "description": "xxskill 主入口。根据你的状态自动路由到最合适的 skill。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "ai-product-builder",
+      "keywords": ["ai", "product", "router", "entry", "chinese"],
+      "skills": ["./skills"]
+    },
+    {
+      "name": "xx-start",
+      "description": "AI产品入门导览。10分钟建立认知，含一个3小时可跑通的AI起名工具练习。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "onboarding",
+      "keywords": ["ai", "beginner", "intro", "tutorial", "chinese"],
+      "skills": ["./skills/01-think/xx-start"]
+    },
+    {
+      "name": "xx-ai-or-not",
+      "description": "AI适用性判断。通过4个问题的决策链，15分钟内给出用AI/用规则/混合/不做的明确结论。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "decision",
+      "keywords": ["ai", "decision", "framework", "rule", "chinese"],
+      "skills": ["./skills/01-think/xx-ai-or-not"]
+    },
+    {
+      "name": "xx-goal",
+      "description": "目标清晰化。用北极星指标 + 假设验证框架，把模糊目标变成可检查的交付物。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "product-strategy",
+      "keywords": ["goal", "north-star", "hypothesis", "chinese"],
+      "skills": ["./skills/01-think/xx-goal"]
+    },
+    {
+      "name": "xx-business",
+      "description": "商业模式梳理。用精益画布理清9个模块，判断模式跑不跑得通。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "product-strategy",
+      "keywords": ["business", "lean-canvas", "model", "chinese"],
+      "skills": ["./skills/01-think/xx-business"]
+    },
+    {
+      "name": "xx-research",
+      "description": "用户调研与需求验证。用最低成本做用户访谈，问行为不问意愿，输出可检查的调研结论。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "product-strategy",
+      "keywords": ["research", "interview", "validation", "chinese"],
+      "skills": ["./skills/01-think/xx-research"]
+    },
+    {
+      "name": "xx-prd",
+      "description": "MVP功能定义。用JTBD + MoSCoW把想法变成可执行的功能清单。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "product-strategy",
+      "keywords": ["prd", "mvp", "jtbd", "moscow", "chinese"],
+      "skills": ["./skills/02-build/xx-prd"]
+    },
+    {
+      "name": "xx-data",
+      "description": "数据中心AI迭代。基于Data-Centric AI思想，教用评估集和数据迭代提升AI输出质量。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "ai-engineering",
+      "keywords": ["data", "evaluation", "iteration", "andrew-ng", "chinese"],
+      "skills": ["./skills/02-build/xx-data"]
+    },
+    {
+      "name": "xx-safety",
+      "description": "AI安全与合规。内容审核三道防线、隐私合规、AI输出安全（防prompt注入）、小程序审核与生成式AI备案。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "ai-engineering",
+      "keywords": ["safety", "compliance", "audit", "privacy", "chinese"],
+      "skills": ["./skills/02-build/xx-safety"]
+    },
+    {
+      "name": "xx-backend",
+      "description": "AI产品最小后端三件套。API代理隐藏key、key轮询降本、简单缓存、限流，不碰微服务与数据库设计。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "engineering",
+      "keywords": ["backend", "cloud-function", "proxy", "cache", "chinese"],
+      "skills": ["./skills/02-build/xx-backend"]
+    },
+    {
+      "name": "xx-setup",
+      "description": "微信小程序项目初始化与合规。云开发配置、ICP备案、project.config.json规范。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "engineering",
+      "keywords": ["wechat", "miniprogram", "setup", "icp", "chinese"],
+      "skills": ["./skills/02-build/xx-setup/wechat"]
+    },
+    {
+      "name": "xx-brand",
+      "description": "设计系统。Apple风格的设计Token，颜色/字号/间距/圆角变量化，暗色模式从第一天规划。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "design",
+      "keywords": ["design", "token", "brand", "apple", "chinese"],
+      "skills": ["./skills/02-build/xx-brand/wechat"]
+    },
+    {
+      "name": "xx-blocks",
+      "description": "可复用组件库。基础/表单/反馈/布局4类组件，单一职责、可组合、可配置。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "engineering",
+      "keywords": ["components", "library", "reusable", "chinese"],
+      "skills": ["./skills/02-build/xx-blocks/wechat"]
+    },
+    {
+      "name": "xx-ai",
+      "description": "AI能力接入。混元调用、降级容错、流式响应、成本控制，含Agentic模式入门。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "ai-engineering",
+      "keywords": ["ai", "hunyuan", "agent", "streaming", "chinese"],
+      "skills": ["./skills/02-build/xx-ai/wechat"]
+    },
+    {
+      "name": "xx-track",
+      "description": "数据埋点 + AI质量监控。业务埋点 + 数据漂移/概念漂移/静默失败三个风险监控。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "operations",
+      "keywords": ["analytics", "tracking", "monitoring", "ai-quality", "chinese"],
+      "skills": ["./skills/03-run/xx-track/wechat"]
+    },
+    {
+      "name": "xx-iterate",
+      "description": "迭代方法论与验收。P0/P1/P2问题分级 + 6步迭代流程 + 5角色验收（含L4 AI评估）。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "operations",
+      "keywords": ["iteration", "acceptance", "p0-p1-p2", "l4", "chinese"],
+      "skills": ["./skills/03-run/xx-iterate"]
+    },
+    {
+      "name": "xx-optimize",
+      "description": "性能与体验优化。P0-P3分级 + 循环优化 + 资源加载 + 设备适配。",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "category": "engineering",
+      "keywords": ["performance", "optimization", "p0-p3", "chinese"],
+      "skills": ["./skills/03-run/xx-optimize/wechat"]
+    }
+  ]
+}

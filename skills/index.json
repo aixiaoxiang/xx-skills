@@ -1,0 +1,184 @@
+{
+  "version": "2.1.0",
+  "updated": "2026-07-06",
+  "layers": [
+    {
+      "id": "01-think",
+      "name": "想清楚",
+      "skills": [
+        {
+          "id": "xx-start",
+          "name": "AI 产品入门导览",
+          "difficulty": 1,
+          "duration": "10min",
+          "platform": "universal",
+          "depends_on": [],
+          "leads_to": ["xx-ai-or-not"],
+          "path": "skills/01-think/xx-start"
+        },
+        {
+          "id": "xx-ai-or-not",
+          "name": "AI 适用性判断",
+          "difficulty": 1,
+          "duration": "15min",
+          "platform": "universal",
+          "depends_on": ["xx-start"],
+          "leads_to": ["xx-goal"],
+          "path": "skills/01-think/xx-ai-or-not"
+        },
+        {
+          "id": "xx-goal",
+          "name": "目标定义",
+          "difficulty": 2,
+          "duration": "20min",
+          "platform": "universal",
+          "depends_on": ["xx-ai-or-not"],
+          "leads_to": ["xx-business"],
+          "path": "skills/01-think/xx-goal"
+        },
+        {
+          "id": "xx-business",
+          "name": "商业结构",
+          "difficulty": 2,
+          "duration": "20min",
+          "platform": "universal",
+          "depends_on": ["xx-goal"],
+          "leads_to": ["xx-research", "xx-prd"],
+          "path": "skills/01-think/xx-business"
+        },
+        {
+          "id": "xx-research",
+          "name": "用户调研与假设验证",
+          "difficulty": 2,
+          "duration": "30min",
+          "platform": "universal",
+          "depends_on": ["xx-goal", "xx-business"],
+          "leads_to": ["xx-prd"],
+          "path": "skills/01-think/xx-research"
+        }
+      ]
+    },
+    {
+      "id": "02-build",
+      "name": "做出来",
+      "skills": [
+        {
+          "id": "xx-prd",
+          "name": "产品设计",
+          "difficulty": 2,
+          "duration": "30min",
+          "platform": "universal",
+          "depends_on": ["xx-business"],
+          "leads_to": ["xx-data", "xx-safety", "xx-setup"],
+          "path": "skills/02-build/xx-prd"
+        },
+        {
+          "id": "xx-data",
+          "name": "数据中心与 AI 评估",
+          "difficulty": 3,
+          "duration": "45min",
+          "platform": "universal",
+          "depends_on": ["xx-prd"],
+          "leads_to": ["xx-ai"],
+          "path": "skills/02-build/xx-data"
+        },
+        {
+          "id": "xx-safety",
+          "name": "安全合规",
+          "difficulty": 2,
+          "duration": "20min",
+          "platform": "universal",
+          "depends_on": ["xx-prd"],
+          "leads_to": ["xx-backend"],
+          "path": "skills/02-build/xx-safety"
+        },
+        {
+          "id": "xx-backend",
+          "name": "后端服务",
+          "difficulty": 3,
+          "duration": "60min",
+          "platform": "wechat",
+          "depends_on": ["xx-safety"],
+          "leads_to": ["xx-ai"],
+          "path": "skills/02-build/xx-backend"
+        },
+        {
+          "id": "xx-setup",
+          "name": "基础设施与合规备案",
+          "difficulty": 2,
+          "duration": "45min",
+          "platform": "wechat",
+          "depends_on": ["xx-prd"],
+          "leads_to": ["xx-brand", "xx-blocks", "xx-ai"],
+          "path": "skills/02-build/xx-setup"
+        },
+        {
+          "id": "xx-brand",
+          "name": "设计系统与品牌一致性",
+          "difficulty": 2,
+          "duration": "45min",
+          "platform": "wechat",
+          "depends_on": ["xx-setup"],
+          "leads_to": ["xx-blocks"],
+          "path": "skills/02-build/xx-brand"
+        },
+        {
+          "id": "xx-blocks",
+          "name": "可复用组件模式库",
+          "difficulty": 2,
+          "duration": "60min",
+          "platform": "wechat",
+          "depends_on": ["xx-brand"],
+          "leads_to": ["xx-ai"],
+          "path": "skills/02-build/xx-blocks"
+        },
+        {
+          "id": "xx-ai",
+          "name": "AI 能力接入",
+          "difficulty": 3,
+          "duration": "90min",
+          "platform": "wechat",
+          "depends_on": ["xx-setup", "xx-backend"],
+          "leads_to": ["xx-track"],
+          "path": "skills/02-build/xx-ai"
+        }
+      ]
+    },
+    {
+      "id": "03-run",
+      "name": "跑起来",
+      "skills": [
+        {
+          "id": "xx-track",
+          "name": "数据埋点与分析",
+          "difficulty": 2,
+          "duration": "45min",
+          "platform": "wechat",
+          "depends_on": ["xx-ai"],
+          "leads_to": ["xx-iterate"],
+          "path": "skills/03-run/xx-track"
+        },
+        {
+          "id": "xx-iterate",
+          "name": "增量迭代与项目验收",
+          "difficulty": 2,
+          "duration": "30min",
+          "platform": "universal",
+          "depends_on": ["xx-track"],
+          "leads_to": ["xx-optimize"],
+          "path": "skills/03-run/xx-iterate"
+        },
+        {
+          "id": "xx-optimize",
+          "name": "性能优化与运动交互",
+          "difficulty": 3,
+          "duration": "60min",
+          "platform": "wechat",
+          "depends_on": ["xx-iterate"],
+          "leads_to": [],
+          "path": "skills/03-run/xx-optimize"
+        }
+      ]
+    }
+  ]
+}

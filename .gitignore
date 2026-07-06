@@ -1,0 +1,5 @@
+# 内部资料，不发布到 GitHub
+internal/
+
+# Trae 维护规则，内部使用
+.trae/
