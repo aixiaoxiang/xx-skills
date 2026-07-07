@@ -1,6 +1,6 @@
 ---
 name: xxskill
-description: 小象AI产品Builder技能包主入口。双模式：任务前路由（你的想法该用哪个 skill）+ 任务后导航（刚做完一个 skill，下一步该干什么）。帮助用户用 AI Agent 把想法变成产品，覆盖想清楚/做出来/跑起来三阶段。触发方式：/xxskill、"帮我做产品"、"我不知道从哪开始"、"下一步怎么走"。
+description: 小象AI产品Builder技能包主入口。双模式：任务前路由（你的想法该用哪个 skill）+ 任务后导航（刚做完一个 skill，下一步该干什么）。帮助用户用好 AI Agent 把想法做成上线的产品，覆盖想清楚/做出来/跑起来三阶段。触发方式：/xxskill、"帮我做产品"、"我不知道从哪开始"、"下一步怎么走"。
 ---
 
 # xxskill：小象AI产品Builder
