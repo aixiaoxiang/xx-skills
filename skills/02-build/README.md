@@ -8,7 +8,7 @@
 
 | 顺序 | skill | 解决什么 | 难度 | 预计耗时 | 前置 skill | 后续 skill | 平台 |
 |------|-------|---------|------|---------|-----------|-----------|------|
-| 6 | xx-prd | MVP 该做什么功能 | 2 | 30 分钟 | xx-research | xx-data | 通用 |
+| 6 | xx-prd | MVP 该做什么功能 | 2 | 30 分钟 | xx-business | xx-data | 通用 |
 | 7 | xx-data | 用数据迭代 AI | 2 | 30 分钟 | xx-prd | xx-safety | 通用 |
 | 8 | xx-safety | 内容安全与风险防控 | 2 | 20 分钟 | xx-data | xx-backend | 通用 |
 | 9 | xx-backend | 后端与数据存储怎么搭 | 2 | 30 分钟 | xx-safety | xx-setup | 微信 |

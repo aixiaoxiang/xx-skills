@@ -8,7 +8,7 @@
 
 | 项目 | 说明 |
 |------|------|
-| 最新版本 | v3.0（2026-07-06） |
+| 最新版本 | v3.0.1（2026-07-07） |
 | 包含技能 | 16 个 |
 | 覆盖阶段 | 想清楚 → 做出来 → 跑起来 |
 | 当前聚焦 | 微信小程序（出海网站场景规划中） |
@@ -356,10 +356,11 @@ xx-skills/
 
 | 版本 | 时间 | 主要变化 |
 |------|------|---------|
+| v3.0.1 | 2026-07-07 | xx-clarify 默认轻量出卡、入口对话模板精简为 3 句、xx-ai-feature 附录化，修复 xx-clarify 定位与 xx-ai-feature 前置依赖 bug |
 | v3.0 | 2026-07-06 | 入口改名 xxskill 并吸收 xx-start 导览（双模式路由）；新增 xx-clarify（需求澄清，JTBD+用户故事映射+Kano+OST）；xx-ai-or-not 改名 xx-ai-feature 并改语义（产品里要不要 AI 能力）；新增 AGENTS.md（Codex 开放标准）；删除 .codex/instructions.md |
-| v1.0 | 2026-07-04 | 初始 10 个 skill，扁平结构 |
-| v2.0 | 2026-07-05 | 重组为 3 层结构，新增 xx-start / xx-ai-or-not / xx-data，补齐 AI 评估、监控、Agentic 入门 |
 | v2.1 | 2026-07-06 | 新增 xx-research / xx-safety / xx-backend，全部 skill 转 codex 模式，统一小象取色案例，新增术语表和依赖 manifest，IDE 规则文件一致性补齐 |
+| v2.0 | 2026-07-05 | 重组为 3 层结构，新增 xx-start / xx-ai-or-not / xx-data，补齐 AI 评估、监控、Agentic 入门 |
+| v1.0 | 2026-07-04 | 初始 10 个 skill，扁平结构 |
 
 ### 反馈方式
 
