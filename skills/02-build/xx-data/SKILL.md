@@ -1,6 +1,6 @@
 ---
 name: xx-data
-description: 数据中心与AI评估方法论技能。当用户做了AI产品但不知道怎么提升输出质量、只靠改prompt碰运气、或缺乏系统化的评估方法时使用。基于Andrew Ng的Data-Centric AI思想，建立评估集、做离线/在线评估、绑定prompt与数据版本，用数据迭代而非盲目调prompt。输出数据迭代日志。AI 按本规范维护评估集与日志，用户按判断标准判断质量好坏。
+description: 数据中心与AI评估方法论技能。当产品的 AI 能力需要提升输出质量、用户只靠改prompt碰运气、或缺乏系统化的评估方法时使用。基于Andrew Ng的Data-Centric AI思想，建立评估集、做离线/在线评估、绑定prompt与数据版本，用数据迭代而非盲目调prompt。输出数据迭代日志。AI 按本规范维护评估集与日志，用户按判断标准判断质量好坏。
 ---
 
 # 数据中心：用数据迭代 AI，不只靠 prompt

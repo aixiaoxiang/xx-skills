@@ -8,9 +8,9 @@
 
 | 顺序 | skill | 解决什么 | 难度 | 预计耗时 | 前置 skill | 后续 skill | 平台 |
 |------|-------|---------|------|---------|-----------|-----------|------|
-| 14 | xx-track | 数据埋点 + AI 质量监控 | 2 | 30 分钟 | xx-ai | xx-iterate | 微信 |
+| 14 | xx-track | 数据埋点 + AI 质量监控 | 2 | 45 分钟 | xx-ai | xx-iterate | 微信 |
 | 15 | xx-iterate | 迭代方法论与验收 | 2 | 30 分钟 | xx-track | xx-optimize | 通用 |
-| 16 | xx-optimize | 性能与体验优化 | 3 | 30 分钟 | xx-iterate | 无 | 微信 |
+| 16 | xx-optimize | 性能与体验优化 | 3 | 60 分钟 | xx-iterate | 无 | 微信 |
 
 ## 平台特化说明
 
