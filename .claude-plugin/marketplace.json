@@ -5,12 +5,12 @@
   },
   "metadata": {
     "description": "小象AI产品Builder技能包 — 从想法到上线的全流程方法论，16 个 skill 覆盖想清楚、做出来、跑起来三个阶段",
-    "version": "2.1.0"
+    "version": "3.0.0"
   },
   "plugins": [
     {
-      "name": "xx",
-      "description": "xxskill 主入口。根据你的状态自动路由到最合适的 skill。",
+      "name": "xxskill",
+      "description": "xxskill 主入口。双模式路由器：任务前路由（你的想法该用哪个 skill）+ 任务后导航（刚做完一个 skill，下一步该干什么）。",
       "source": "./",
       "strict": false,
       "version": "1.0.0",
@@ -19,24 +19,24 @@
       "skills": ["./skills"]
     },
     {
-      "name": "xx-start",
-      "description": "AI产品入门导览。10分钟建立认知，含一个3小时可跑通的AI起名工具练习。",
+      "name": "xx-clarify",
+      "description": "需求澄清。用 JTBD+用户故事映射+Kano+OST 把模糊想法澄清成结构化问题定义，输出澄清卡。",
       "source": "./",
       "strict": false,
       "version": "1.0.0",
-      "category": "onboarding",
-      "keywords": ["ai", "beginner", "intro", "tutorial", "chinese"],
-      "skills": ["./skills/01-think/xx-start"]
+      "category": "product-strategy",
+      "keywords": ["clarify", "jtbd", "kano", "ost", "chinese"],
+      "skills": ["./skills/01-think/xx-clarify"]
     },
     {
-      "name": "xx-ai-or-not",
-      "description": "AI适用性判断。通过4个问题的决策链，15分钟内给出用AI/用规则/混合/不做的明确结论。",
+      "name": "xx-ai-feature",
+      "description": "判断产品里要不要内置 AI 能力。当产品想法已经过需求澄清，决定要不要给产品加 AI 功能时使用。",
       "source": "./",
       "strict": false,
       "version": "1.0.0",
       "category": "decision",
       "keywords": ["ai", "decision", "framework", "rule", "chinese"],
-      "skills": ["./skills/01-think/xx-ai-or-not"]
+      "skills": ["./skills/01-think/xx-ai-feature"]
     },
     {
       "name": "xx-goal",

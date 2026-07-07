@@ -8,16 +8,16 @@
 
 | 顺序 | skill | 解决什么 | 难度 | 预计耗时 | 前置 skill | 后续 skill | 平台 |
 |------|-------|---------|------|---------|-----------|-----------|------|
-| 1 | xx-start | AI 产品是什么、我能不能做 | 1 | 10 分钟 | 无 | xx-ai-or-not | 通用 |
-| 2 | xx-ai-or-not | 要不要用 AI | 1 | 15 分钟 | xx-start | xx-goal | 通用 |
-| 3 | xx-goal | 定目标、判断成功 | 2 | 20 分钟 | xx-ai-or-not | xx-business | 通用 |
-| 4 | xx-business | 商业模式跑不跑得通 | 2 | 20 分钟 | xx-goal | xx-research | 通用 |
-| 5 | xx-research | 轻量调研、验证假设 | 1 | 20 分钟 | xx-business | xx-prd | 通用 |
+| 1 | xx-clarify | 需求澄清，把模糊想法变结构化 | 2 | 30 分钟 | 无 | xx-research | 通用 |
+| 2 | xx-research | 用户调研与需求验证 | 1 | 20 分钟 | xx-clarify | xx-goal | 通用 |
+| 3 | xx-goal | 定目标、北极星指标 | 2 | 20 分钟 | xx-research | xx-ai-feature | 通用 |
+| 4 | xx-ai-feature | 判断产品要不要 AI 能力 | 2 | 15 分钟 | xx-goal | xx-business | 通用 |
+| 5 | xx-business | 精益画布理清商业模式 | 2 | 20 分钟 | xx-ai-feature | xx-prd | 通用 |
 
 ## 学完这一层后
 
 | 你的决定 | 下一步 |
 |---------|--------|
 | 决定不做 → 省了开发成本 | 到此为止 |
-| 决定做但不用 AI → 用传统开发 | 进 ../02-build/ 层，跳过 xx-ai |
-| 决定做且用 AI → 进入开发 | 进 ../02-build/ 层，重点看 xx-data 和 xx-ai |
+| 决定做但产品不加 AI → 用 AI Agent 传统开发 | 进 ../02-build/ 层，跳过 xx-ai |
+| 决定做且产品要加 AI → 进入开发 | 进 ../02-build/ 层，重点看 xx-data 和 xx-ai |

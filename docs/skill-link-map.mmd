@@ -15,14 +15,14 @@
 }}%%
 
 flowchart TD
-    XX["/xx 主入口"]
+    XX["/xxskill 主入口"]
 
     subgraph think["01-think 想清楚"]
-        S["xx-start"]
-        AON["xx-ai-or-not"]
-        G["xx-goal"]
-        B["xx-business"]
+        CL["xx-clarify"]
         R["xx-research"]
+        G["xx-goal"]
+        AF["xx-ai-feature"]
+        B["xx-business"]
     end
 
     subgraph build["02-build 做出来"]
@@ -42,20 +42,20 @@ flowchart TD
         O["xx-optimize"]
     end
 
-    XX --> S
-    XX --> AON
-    XX --> G
-    XX --> B
+    XX --> CL
     XX --> R
+    XX --> G
+    XX --> AF
+    XX --> B
     XX --> P
     XX --> T
     XX --> IT
 
-    S --> AON
-    AON --> G
-    G --> B
-    B --> R
-    R --> P
+    CL --> R
+    R --> G
+    G --> AF
+    AF --> B
+    B --> P
 
     P --> D
     D --> SF

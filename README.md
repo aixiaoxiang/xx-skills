@@ -8,7 +8,7 @@
 
 | 项目 | 说明 |
 |------|------|
-| 最新版本 | v2.1（2026-07-06） |
+| 最新版本 | v3.0（2026-07-06） |
 | 包含技能 | 16 个 |
 | 覆盖阶段 | 想清楚 → 做出来 → 跑起来 |
 | 当前聚焦 | 微信小程序（出海网站场景规划中） |
@@ -75,11 +75,11 @@
 
 | 顺序 | 技能 | 解决什么 | 预计时间 |
 |------|------|---------|---------|
-| 1 | 01-think/xx-start | AI 产品是什么、我能不能做 | 10 分钟 |
-| 2 | 01-think/xx-ai-or-not | 我的场景该不该用 AI | 15 分钟 |
+| 1 | 01-think/xx-clarify | 需求澄清，把模糊想法变结构化 | 30 分钟 |
+| 2 | 01-think/xx-research | 怎么做轻量调研，验证假设 | 20 分钟 |
 | 3 | 01-think/xx-goal | 为谁解决什么问题、怎么判断成功 | 20 分钟 |
-| 4 | 01-think/xx-business | 商业模式跑不跑得通 | 20 分钟 |
-| 5 | 01-think/xx-research | 怎么做轻量调研，验证假设 | 20 分钟 |
+| 4 | 01-think/xx-ai-feature | 判断产品要不要 AI 能力 | 15 分钟 |
+| 5 | 01-think/xx-business | 商业模式跑不跑得通 | 20 分钟 |
 
 ### 第二层·做出来（需要基本开发能力）
 
@@ -116,7 +116,7 @@
 
 **通用方法论**（单文件 SKILL.md，所有平台通用）：
 
-- 01-think 全部 5 个：xx-start、xx-ai-or-not、xx-goal、xx-business、xx-research
+- 01-think 全部 5 个：xx-clarify、xx-research、xx-goal、xx-ai-feature、xx-business
 - 02-build 中的：xx-prd、xx-data、xx-safety、xx-backend
 - 03-run 中的：xx-iterate
 
@@ -161,19 +161,19 @@
 
 | 你的状态 | 从哪开始 |
 |---------|---------|
-| 完全新手，没做过 AI 产品 | 从  01-think/xx-start 开始 |
-| 有想法，但不确定要不要用 AI | 先看  01-think/xx-ai-or-not |
+| 完全新手，没做过 AI 产品 | 从  01-think/xx-clarify 开始，把想法澄清 |
+| 有想法，但不确定要不要用 AI | 先看  01-think/xx-ai-feature |
 | 决定做了，但没想清楚目标 | 从  01-think/xx-goal 开始 |
 | 已经在开发，遇到具体问题 | 从  02-build/ 层选对应的 skill |
 | 已经上线，想优化转化/质量 | 从  03-run/xx-track 开始 |
 
 ---
 
-## 入口 skill：xx
+## 入口 skill：xxskill
 
-SKILL.md 是整个技能包的入口。它的作用类似 dbs 的 dbs 入口 skill——当你不知道从何开始时，直接调用它。
+SKILL.md 是整个技能包的入口。它是一个双模式路由器：任务前帮你定位从哪开始，任务后帮你导航到下一个 skill。
 
-在 Trae 中，输入 /xx 即可唤起入口 skill，它会问你：
+在 Trae 中，输入 /xxskill 即可唤起入口 skill，它会问你：
 
 > 你在哪一层？告诉我你现在的状态，我帮你定位。
 
@@ -197,7 +197,7 @@ Claude Code 会读取项目根目录下的 CLAUDE.md 作为全局上下文。
 
 1. 将本仓库根目录的 CLAUDE.md 复制到你项目的根目录（或直接用本仓库作为项目）
 2. 启动 Claude Code，它会自动识别 CLAUDE.md
-3. 输入类似"帮我从 xx-start 开始做 AI 产品"的指令，Claude 会按 3 层路径引导你
+3. 输入类似"帮我从 xx-clarify 开始"的指令，Claude 会按 3 层路径引导你
 
 如果你不想用 CLAUDE.md，也可以直接打开任意 skill 的 SKILL.md，复制内容粘贴到 Claude Code 对话中。
 
@@ -205,7 +205,7 @@ Claude Code 会读取项目根目录下的 CLAUDE.md 作为全局上下文。
 
 Codex 可以通过项目级指令文件或对话 prompt 使用。
 
-1. 将 .codex/instructions.md 的内容复制到你项目的 .codex/instructions.md（或等效位置）
+1. 将 AGENTS.md 的内容复制到你项目的根目录 AGENTS.md（AGENTS.md 是 OpenAI 2025 年推出的开放标准，被 Codex 等工具识别）
 2. 启动 Codex 时，它会自动加载这些指令
 3. 你也可以直接复制某个 skill 的 SKILL.md 内容到 Codex 对话中
 
@@ -214,7 +214,7 @@ Codex 可以通过项目级指令文件或对话 prompt 使用。
 Trae 原生支持 skill。
 
 1. 将整个 xx-skills 文件夹复制到你项目的 .trae/skills/ 目录下
-2. 打开 Trae 的 AI 对话，输入 /xx 唤起入口 skill，或输入对应 skill 名（如 /xx-start）
+2. 打开 Trae 的 AI 对话，输入 /xxskill 唤起入口 skill，或输入对应 skill 名（如 /xx-clarify）
 3. AI 会自动读取 SKILL.md 中的 name 和 description，并按方法论引导你
 
 ### Cursor
@@ -262,9 +262,9 @@ Cursor 支持 .cursorrules 文件作为项目级规则。
 如果你刚拿到这个技能包，建议按这个顺序：
 
 1. **10 分钟**：读完这篇 README，判断自己是否适合用
-2. **15 分钟**：打开  01-think/xx-start，建立 AI 产品基础认知
-3. **30 分钟**：走一遍  01-think/xx-ai-or-not 和  01-think/xx-goal，确认自己的方向
-4. **3 小时**：完成 xx-start 里的 AI 起名工具练习，跑通第一个端到端 AI 功能
+2. **15 分钟**：打开  01-think/xx-clarify，把你的想法澄清
+3. **30 分钟**：走一遍  01-think/xx-ai-feature 和  01-think/xx-goal，确认自己的方向
+4. **3 小时**：用 xx-clarify 把你的想法澄清成结构化问题定义，跑通第一个端到端 AI 功能
 5. **1 天**：用  02-build/ 的技能把你的第一个 MVP 做出来
 6. **上线后**：用  03-run/xx-track 埋点，用  03-run/xx-iterate 迭代
 
@@ -300,7 +300,7 @@ Cursor 支持 .cursorrules 文件作为项目级规则。
 - **初学者真实学习曲线**：16 个 skill 的总学习时长是估算，需要根据用户反馈调整
 - **Codex 模式的真实可用性**：全部 skill 转为 codex 模式后，"不写代码、只提需求"的工作流是否真的顺畅，需要用户反馈验证
 - **Agentic 章节深度**：模块四只讲入门，复杂 Agent 工作流需要后续扩展
-- **平台命名是否便于记忆**：xx-start / xx-ai-or-not 等新命名需要用户验证
+- **平台命名是否便于记忆**：xx-clarify / xx-ai-feature 等新命名需要用户验证
 
 如果你在使用过程中发现问题，欢迎反馈。
 
@@ -318,8 +318,7 @@ xx-skills/
 ├── VERSION                # 版本号
 ├── LICENSE
 ├── .cursorrules           # Cursor 项目级规则
-├── .codex/
-│   └── instructions.md    # OpenAI Codex 指令
+├── AGENTS.md              # OpenAI Codex 开放标准指令
 ├── .claude-plugin/
 │   └── marketplace.json
 ├── windsurf/
@@ -331,11 +330,11 @@ xx-skills/
 │   ├── index.json         # skill 依赖 manifest
 │   ├── 01-think/          # 想清楚
 │   │   ├── README.md
-│   │   ├── xx-start/
-│   │   ├── xx-ai-or-not/
+│   │   ├── xx-clarify/
+│   │   ├── xx-research/
 │   │   ├── xx-goal/
-│   │   ├── xx-business/
-│   │   └── xx-research/
+│   │   ├── xx-ai-feature/
+│   │   └── xx-business/
 │   ├── 02-build/          # 做出来
 │   │   ├── README.md
 │   │   ├── xx-prd/
@@ -357,6 +356,7 @@ xx-skills/
 
 | 版本 | 时间 | 主要变化 |
 |------|------|---------|
+| v3.0 | 2026-07-06 | 入口改名 xxskill 并吸收 xx-start 导览（双模式路由）；新增 xx-clarify（需求澄清，JTBD+用户故事映射+Kano+OST）；xx-ai-or-not 改名 xx-ai-feature 并改语义（产品里要不要 AI 能力）；新增 AGENTS.md（Codex 开放标准）；删除 .codex/instructions.md |
 | v1.0 | 2026-07-04 | 初始 10 个 skill，扁平结构 |
 | v2.0 | 2026-07-05 | 重组为 3 层结构，新增 xx-start / xx-ai-or-not / xx-data，补齐 AI 评估、监控、Agentic 入门 |
 | v2.1 | 2026-07-06 | 新增 xx-research / xx-safety / xx-backend，全部 skill 转 codex 模式，统一小象取色案例，新增术语表和依赖 manifest，IDE 规则文件一致性补齐 |

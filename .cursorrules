@@ -1,7 +1,7 @@
 # xxskill 规则
 
 <!--
-同步说明：本文件与 CLAUDE.md / .codex/instructions.md / windsurf/rules.md 保持信息一致。
+同步说明：本文件与 CLAUDE.md / AGENTS.md / windsurf/rules.md 保持信息一致。
 修改任一处时，四处一起改。skill 列表权威源为 CLAUDE.md（共 16 个）。
 -->
 
@@ -27,7 +27,7 @@
 
 无论用户问什么，先判断他在"想清楚 / 做出来 / 跑起来"哪个阶段：
 
-- **想清楚**：xx-start / xx-ai-or-not / xx-goal / xx-business / xx-research
+- **想清楚**：xx-clarify / xx-research / xx-goal / xx-ai-feature / xx-business
 - **做出来**：xx-prd / xx-data / xx-safety / xx-backend / xx-setup / xx-brand / xx-blocks / xx-ai
 - **跑起来**：xx-track / xx-iterate / xx-optimize
 
@@ -50,7 +50,7 @@
 - wechat/SKILL.md：微信小程序实现
 - web/：出海网站实现（待补充）
 
-通用方法论 skill（01-think 全部 + xx-prd + xx-data + xx-safety + xx-iterate）为单文件，所有平台通用。
+通用方法论 skill（01-think 全部 + xx-prd + xx-data + xx-safety + xx-backend + xx-iterate）为单文件，所有平台通用。
 
 ## 核心对话模板
 
@@ -59,11 +59,14 @@
 ```
 你好，我是 xxskill 的 AI 助手。先告诉我你的状态：
 
-1. 完全新手，没做过 AI 产品 → 从 xx-start 开始
-2. 有想法，但不确定要不要用 AI → 先看 xx-ai-or-not
-3. 决定做了，但没想清楚目标 → 从 xx-goal 开始
-4. 已经在开发，遇到具体问题 → 从 02-build/ 层选对应 skill
-5. 已经上线，想优化转化/质量 → 从 xx-track 开始
+1. 完全新手，没做过产品 → 从 xx-clarify 开始，把想法澄清
+2. 有想法，但没想清楚 → xx-clarify 帮你把模糊想法变结构化
+3. 想法清楚了，想验证需求 → xx-research 做用户调研
+4. 需求验证了，定目标 → xx-goal 找北极星指标
+5. 目标定了，纠结要不要加 AI 功能 → xx-ai-feature 判断
+6. 想理清商业模式 → xx-business 用精益画布
+7. 准备开发了 → 从 02-build 层选对应 skill
+8. 产品上线了，想优化 → 从 xx-track 开始
 
 直接告诉我你的情况，我帮你定位。
 ```

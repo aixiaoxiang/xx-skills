@@ -30,6 +30,10 @@
 
 **最危险假设** — 一旦错了整个产品就没存在意义的那个假设，应优先用最小成本验证。
 
+**RICE** — 需求优先级量化打分：得分 = (Reach 影响人数 × Impact 影响程度 × Confidence 信心) ÷ Effort 工作量，分数越高越优先做。
+
+**Problem Statement** — 问题陈述，一句话定义"谁的什么痛"，是需求阶段通向方案阶段的枢纽，避免直接跳到功能。
+
 ---
 
 ## 二、AI 能力与数据评估
@@ -139,3 +143,25 @@
 ## 七、平台架构
 
 **SHARED/wechat/web 分层结构** — 本技能包的平台特化组织方式：SHARED.md 写跨平台通用原则，wechat/SKILL.md 写微信实现，web/SKILL.md 写出海网站实现（待补充）。
+
+**AGENTS.md** — OpenAI 2025 年联合 Google、Cursor 等推出的开放标准，用一份 Markdown 给 AI 编码代理当"项目入职手册"，目标是统一各厂商私有的配置文件（如 CLAUDE.md、.cursorrules）。
+
+**xxskill** — 本技能包的主入口，双模式路由器：任务前路由（你的想法该用哪个 skill）+ 任务后导航（刚做完一个 skill，下一步该干什么）。
+
+---
+
+## 八、需求澄清方法论（xx-clarify 专用）
+
+**outcome statement** — 用 JTBD 表达需求的句式："当 [情境]，我想 [做什么]，以便 [达成什么结果]"，避免直接跳到功能词。
+
+**Forces of Progress** — JTBD 的核心工具，分析用户切换产品时的四种力：推动力（push）、吸引力（pull）、焦虑（anxiety）、惯性（inertia）。
+
+**walking skeleton** — 用户故事映射里的"行走的骨骼"，由一级用户任务组成的用户旅程主线，画全它就能暴露哪些环节没人想、哪些断掉了。
+
+**Kano 模型** — 狩野纪昭提出的需求分类法，把需求分成基本（没有就怒）、期望（越多越满意）、兴奋（没有不怨有了惊喜）、无差异、反向五类，用于澄清时防止把兴奋当基本。
+
+**OST（Opportunity Solution Tree）** — Teresa Torres 提出的结构化工具，四层：Outcome（业务结果）→ Opportunity（用户机会/痛点）→ Solution（解决方案）→ Experiment（实验），强制区分"机会"和"方案"。
+
+**Switch Interview** — JTBD 的回溯访谈法，让用户回忆上次切换产品的完整时间线，挖出用户自己都说不清的焦虑和惯性。
+
+**澄清卡** — xx-clarify 的输出物，包含 problem statement + 机会清单 + 假设清单 + 建议下一步，可直接喂给 xx-research 验证或 xx-prd 定义 MVP。

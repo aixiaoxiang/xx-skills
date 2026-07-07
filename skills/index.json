@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "3.0.0",
   "updated": "2026-07-06",
   "layers": [
     {
@@ -7,24 +7,24 @@
       "name": "想清楚",
       "skills": [
         {
-          "id": "xx-start",
-          "name": "AI 产品入门导览",
-          "difficulty": 1,
-          "duration": "10min",
+          "id": "xx-clarify",
+          "name": "需求澄清",
+          "difficulty": 2,
+          "duration": "30min",
           "platform": "universal",
           "depends_on": [],
-          "leads_to": ["xx-ai-or-not"],
-          "path": "skills/01-think/xx-start"
+          "leads_to": ["xx-research"],
+          "path": "skills/01-think/xx-clarify"
         },
         {
-          "id": "xx-ai-or-not",
-          "name": "AI 适用性判断",
+          "id": "xx-research",
+          "name": "用户调研与需求验证",
           "difficulty": 1,
-          "duration": "15min",
+          "duration": "20min",
           "platform": "universal",
-          "depends_on": ["xx-start"],
+          "depends_on": ["xx-clarify"],
           "leads_to": ["xx-goal"],
-          "path": "skills/01-think/xx-ai-or-not"
+          "path": "skills/01-think/xx-research"
         },
         {
           "id": "xx-goal",
@@ -32,9 +32,19 @@
           "difficulty": 2,
           "duration": "20min",
           "platform": "universal",
-          "depends_on": ["xx-ai-or-not"],
-          "leads_to": ["xx-business"],
+          "depends_on": ["xx-research"],
+          "leads_to": ["xx-ai-feature"],
           "path": "skills/01-think/xx-goal"
+        },
+        {
+          "id": "xx-ai-feature",
+          "name": "产品 AI 能力决策",
+          "difficulty": 2,
+          "duration": "15min",
+          "platform": "universal",
+          "depends_on": ["xx-goal"],
+          "leads_to": ["xx-business"],
+          "path": "skills/01-think/xx-ai-feature"
         },
         {
           "id": "xx-business",
@@ -42,19 +52,9 @@
           "difficulty": 2,
           "duration": "20min",
           "platform": "universal",
-          "depends_on": ["xx-goal"],
-          "leads_to": ["xx-research", "xx-prd"],
-          "path": "skills/01-think/xx-business"
-        },
-        {
-          "id": "xx-research",
-          "name": "用户调研与假设验证",
-          "difficulty": 2,
-          "duration": "30min",
-          "platform": "universal",
-          "depends_on": ["xx-goal", "xx-business"],
+          "depends_on": ["xx-ai-feature"],
           "leads_to": ["xx-prd"],
-          "path": "skills/01-think/xx-research"
+          "path": "skills/01-think/xx-business"
         }
       ]
     },
@@ -97,7 +97,7 @@
           "name": "后端服务",
           "difficulty": 3,
           "duration": "60min",
-          "platform": "wechat",
+          "platform": "universal",
           "depends_on": ["xx-safety"],
           "leads_to": ["xx-ai"],
           "path": "skills/02-build/xx-backend"
